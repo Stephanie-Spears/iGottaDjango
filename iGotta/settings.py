@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,6 +79,8 @@ WSGI_APPLICATION = 'iGotta.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+        #name should be the full absolute path to the sql db--defaults to proj. directory root
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
